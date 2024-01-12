@@ -12,7 +12,7 @@ let maximumMassLimit = 850000;
 let fuelTempCelsius = -225;
 let minimumFuelTemp = -300;
 let maximumFuelTemp = -150;
-let fuelLevel = "100%";
+let fuelLevel = 100 +"%";
 let weatherStatus = "clear";
 let preparedForLiftOff = true;
 
@@ -24,7 +24,7 @@ if (astronautCount <= 7){
     console.log("Launch Shattered")
 }
 // add logic below to verify all astronauts are ready
-if (astronautStatus = "ready"){
+if (astronautStatus === "ready"){
     console.log("Launch");
 }else{
     console.log("Launch Shattered")
@@ -42,7 +42,7 @@ if (fuelTempCelsius > -300 || fuelTempCelsius <-150){
     console.log("Launch Shattered")
 }
 // add logic below to verify the fuel level is at 100%
-if (fuelLevel === "100%"){
+if (fuelLevel === 100 +"%"){
     console.log("Launch");
 }else{
     console.log("Launch Shattered")
@@ -68,3 +68,8 @@ console.log("Fuel Temperature: " + fuelTempCelsius + " C")
 console.log("Weather Status: " + weatherStatus)
 console.log(".....................................................................")
 console.log("Have a safe trip astronauts!")
+
+
+// !engineIndicatorLight === 'red blinking' 
+
+// engineIndicatorLight !== 'red blinking' 
