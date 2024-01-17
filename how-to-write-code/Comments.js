@@ -1,4 +1,8 @@
    // This demo shows off comments!
+   //I am learning how to use comments
+   /*It will
+   help me to explain
+   my code*/
 
    // console.log("This does not print.");
 

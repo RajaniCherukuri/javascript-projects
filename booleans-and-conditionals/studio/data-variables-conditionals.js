@@ -21,40 +21,47 @@ let preparedForLiftOff = true;
 if (astronautCount <= 7){
     console.log("Launch");
 }else{
+    preparedForLiftOff = false;
     console.log("Launch Shattered")
 }
 // add logic below to verify all astronauts are ready
 if (astronautStatus === "ready"){
     console.log("Launch");
 }else{
+    preparedForLiftOff = false;
     console.log("Launch Shattered")
 }
 // add logic below to verify the total mass does not exceed the maximum limit of 850000
 if (totalMassKg < maximumMassLimit){
     console.log("Launch");
 }else{
+    preparedForLiftOff = false;
     console.log("Launch Shattered")
 }
 // add logic below to verify the fuel temperature is within the appropriate range of -150 and -300
 if (fuelTempCelsius > -300 || fuelTempCelsius <-150){
     console.log("Launch");
 }else{
+    preparedForLiftOff = false;
     console.log("Launch Shattered")
 }
 // add logic below to verify the fuel level is at 100%
 if (fuelLevel === 100 +"%"){
     console.log("Launch");
 }else{
+    preparedForLiftOff = false;
     console.log("Launch Shattered")
 }
 // add logic below to verify the weather status is clear
 if (weatherStatus ==="clear" ){
     console.log("Launch");
 }else {
+    preparedForLiftOff = false;
     console.log("Launch Shattered");
 }
 
 //Verify shuttle launch can proceed based on above conditions
+if (preparedForLiftOff === true){
 console.log("All systems are a go!Initiating space shuttle launch sequence.")
 console.log(".....................................................................")
 console.log("Date: " + date)
@@ -68,6 +75,9 @@ console.log("Fuel Temperature: " + fuelTempCelsius + " C")
 console.log("Weather Status: " + weatherStatus)
 console.log(".....................................................................")
 console.log("Have a safe trip astronauts!")
+}else{
+    console.log("Launch Shattered");
+}
 
 
 // !engineIndicatorLight === 'red blinking' 

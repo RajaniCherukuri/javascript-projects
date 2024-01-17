@@ -1,6 +1,9 @@
 const input = require('readline-sync');
 
-let info = input.question("Question text... ");
+let info ;
+let question1 ="Who was the first American woman in space?";
+console.log(question1);
+info = input.question("Your Answer... ");
 console.log(info)
 
 // const input = require('readline-sync');
