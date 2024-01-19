@@ -1,3 +1,4 @@
+const input = require('readline-sync');
 let food = "water bottles,meal packs,snacks,chocolate";
 let equipment = "space suits,jet packs,tool belts,thermal detonators";
 let pets = "parrots,cats,moose,alien eggs";
@@ -22,8 +23,16 @@ console.log(cargoHold);
 console.log(cargoHold[0],
     cargoHold[1],
     cargoHold[2]);
+    userInput = input.question("Please select a cabinet (0 - 3) in the cargoHold:");
+    console.log(cargoHold[userInput]);
 
 //4) Use bracket notation and a template literal to display the contents of the selected cabinet. If the user entered an invalid number, print an error message.
-
-
+if (cargoHold[userInput] <= cargoHold.length){
+    console.log(`The contents of the sellected cabinet is:${cargoHold[userInput]}`)
+}else{
+    console.log("You have entered invalid number.Please select a cabinet between 0 - 3 in the cargoHold")
+}
+//console.log(``)
 //5) Modify the code to query the user for BOTH a cabinet in cargoHold AND a particular item. Use the 'includes' method to check if the cabinet contains the selected item, then print “Cabinet ____ DOES/DOES NOT contain ____.”
+userInput1 = input.question("Please select a cabinet (0 - 3) in the cargoHold an dthe :");
+    console.log(cargoHold[userInput]);
