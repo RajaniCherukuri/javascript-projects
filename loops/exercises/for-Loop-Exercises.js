@@ -64,12 +64,16 @@ let arr = [2, 3, 13, 18, -5, 38, -10, 11, 0, 104];
 let arrEven = [];
 let arrOdd = [];
 for (let i = 0; i < arr.length; i++){
-  if(i % 2 ===0){
-   console.log(arrEven);
+  if(arr[i] % 2 ===0){
+    arrEven.push(arr[i])
   }
-}
+  if(arr[i] % 2 ===1){
+    arrOdd.push(arr[i])
+   }
+  }
+
 console.log(arrEven);
-// console.log(arrOdd);
+console.log(arrOdd);
 
 
 
