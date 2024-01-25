@@ -1,5 +1,6 @@
 //We want to COMPLETELY reverse an array by flipping the order of the entries AND flipping the order of characters in each element.
 
+
 // Part One: Reverse Characters
 
 // 1. Define the function as reverseCharacters. Give it one parameter, which will be the string to reverse.
@@ -17,6 +18,7 @@
 // 4. Return the reversed number.
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
 
+
 // Part Three: Complete Reversal
 
 // 1. Define and initialize an empty array.
@@ -26,9 +28,47 @@
 // 5. Return the final, reversed array.
 // 6. Be sure to print the results from each test case in order to verify your code.
 
-let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
-let arrayTest2 = [123, 8897, 42, 1168, 8675309];
-let arrayTest3 = ['hello', 'world', 123, 'orange'];
+function reverseCharacters(str){
+    let arr =[];
+    let str1 ="";
+
+    if(typeof(str)=="number"){
+       str1 = Number(String(str).split("").reverse().join(""))
+    }
+    if (typeof(str) =="string"){
+       str1 = str.split("").reverse().join("")
+    }
+    if (Array.isArray(str)){
+        for(i = 0;i < str.length;i++){
+            arr[i] = reverseCharacters(str[i])     
+        }
+        str1 = arr.reverse()
+    }
+    return str1
+}
+
+// 2. Loop through the old array.
+// 3. For each element in the old array, call reverseCharacters to flip the characters or digits.
+// 4. Add the reversed string (or number) to the array defined in part ‘a’.
+// 5. Return the final, reversed array.
+
+//let myVariableName ="LaunchCode"
+//let myVariableName =12345
+//let myVariableName ='apple'
+//let myVariableName ='LC101'
+//let myVariableName ='Capitalized Letters'
+// let myVariableName ='I love the smell of code in the morning.'
+//let myVariableName =1234
+//let myVariableName ='LC101'
+//let myVariableName =8675309
+let myVariableName ='radar'
+console.log(reverseCharacters(myVariableName));
+arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
+console.log(reverseCharacters(arrayTest1));
+arrayTest2 = [123, 8897, 42, 1168, 8675309];
+console.log(reverseCharacters(arrayTest2));
+arrayTest3 = ['hello', 'world', 123, 'orange'];
+console.log(reverseCharacters(arrayTest3));
 
 // Bonus Missions
 
@@ -49,3 +89,12 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 // 3. Call your area function by passing in two arguments - the length and width.
 // 4. If only one argument is passed to the function, then the shape is a square. Modify your code to deal with this case.
 // 5. Use a template literal to print, “The area is ____ cm^2.”
+
+
+let num = 42;
+
+function isEven (num) {
+   return num % 2 === 0;
+}
+
+console.log(isEven(43));
