@@ -91,10 +91,3 @@ console.log(reverseCharacters(arrayTest3));
 // 5. Use a template literal to print, “The area is ____ cm^2.”
 
 
-let num = 42;
-
-function isEven (num) {
-   return num % 2 === 0;
-}
-
-console.log(isEven(43));

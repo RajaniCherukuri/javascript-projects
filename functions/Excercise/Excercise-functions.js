@@ -83,13 +83,23 @@ console.log("..................")
 //2.b makediamond function
 function makeDiamond(height){
     let diamond ="";
-    for (let i=0; i < height;i++){
-        diamond += (makeSpaceLine(height - i - 1, 2*i + 1) + "\n");
-       }
-    return diamond.slice(0,-1)
+    //for (let i =0 ;i <=height; i++){
+        diamond += makeIsoscelesTriangle(height)
+      // }
+return diamond.slice(0,-1)
 }
-console.log(makeDiamond(5));
+console.log( makeDiamond(5));
+console.log("..................")
+function makeReverseIsoscelesTriangle(height){
+    let triangle ="";
+    for (let i=0; i < height;i++){
+        triangle += (makeIsoscelesTriangle( 2*i , height -i  ) + "\n");
+       }
+    return triangle.slice(0,-1)
+}
+console.log(makeReverseIsoscelesTriangle(5));
 
+console.log("..................")
 //another way
 
 // //make a diamond
