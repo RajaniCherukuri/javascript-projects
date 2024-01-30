@@ -7,4 +7,29 @@ let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
 
 //Using one of the test arrays as the argument, call your function inside the console.log statement below.
 
-console.log(/* your code here */);
+let arr = [];
+function minValue(array){
+    let min = array[0];
+    for(let i = 1; i < arr.length;i++){
+        if (array[i] < min){
+            min = array[i]
+            array.split(array.indexOf(min,1))
+           
+        }
+    return min;
+
+    }
+}
+
+function sortArray(array){
+    let arrayToSort = [];
+    while(array.length !== 0){
+        let minimum = minValue(array)
+        arrayToSort.push(minimum)
+        array.splice(array.indexOf(minimum,1))
+
+    }
+    return sortArray
+}
+console.log(minValue(nums1));
+//console.log(sortArray(nums1));
