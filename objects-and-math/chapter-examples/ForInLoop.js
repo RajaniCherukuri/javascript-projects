@@ -298,25 +298,5 @@ console.log("-------------------------------------------------")
    // }
 
 
-    //another way
-//   let listOfIDs = []; 
 
-//   function generateRandomInt(lowerBound, upperBound) {
-//      let randomInt;
-//      randomInt = Math.round(lowerBound + Math.random() * (upperBound - lowerBound));
-//      return randomInt;
-//   }
-  
-//   function generateUniqueID(startID, endID, IDarray) {
-//      let uniqueID;
-//      do {
-//         uniqueID = generateRandomInt(startID, endID);
-//      } while (IDarray.indexOf(uniqueID) !== -1)
-//      IDarray.push(uniqueID);
-//      return uniqueID;
-//   }
-  
-//   //let crew = [superChimpOne, salamander, superChimpTwo, dog, weaterBear];
-  
-//   crew.forEach(crewMember => crewMember.astronuatID = generateUniqueID(1, 10, listOfIDs));
 
