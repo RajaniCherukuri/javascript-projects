@@ -9,3 +9,6 @@ function checkFive(num){
    }
    return result;
  }
+ //console.log(checkFive(20));
+
+ module.exports = {checkFive}
