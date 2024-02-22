@@ -1,1 +1,78 @@
 /* Start adding your styling below! */ 
+        <style>
+        body {
+            background-color: yellow;
+        }
+        h1 {
+            font-size: 36px
+        }
+        p {
+            color: green;
+        }   
+        .center {
+            text-align: center;
+        }
+        #list-color {
+            color: blueviolet;
+         }
+        
+        </style> 
+        
+
+
+/* Practice */
+
+/* selector {
+    declaration block
+} */
+
+
+/*Practice */
+
+/* selector {
+    declaration block
+} */
+
+/* selector {
+    property: value;
+    property: value;
+    property: value;
+} */
+
+/* <tag style="property:value;property:value;property:value;">content</tag> */
+
+/* Element selector
+p {
+    color: pink;
+} */
+
+/* class selector
+.pink-paragraph {
+    color: pink;
+} */
+
+/* id selector 
+#pinkParagraph {
+    color: pink;
+} */
+
+/* linking css to html
+
+external
+<head>
+    <title>My Web Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head> */
+
+/* internal
+<head>
+    <title>My Web Page</title>
+    <style>
+    selector {
+        declaration block
+    }
+    </style>
+</head> */
+
+/* inline
+<tag style="declaration block">content</tag> */
