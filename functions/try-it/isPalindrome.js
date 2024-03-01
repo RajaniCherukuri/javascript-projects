@@ -5,7 +5,37 @@ function reverse(str) {
 function isPalindrome(str) {
    return reverse(str) === str;
 }
-isPalindrome("LaunchCode")
+console.log(isPalindrome("kayak"));
+console.log(isPalindrome("LaunchCode"));
+
+
+// function reverse(str) {
+//    let lettersArray = str.split('');
+//    let reversedLettersArray = lettersArray.reverse();
+//    return reversedLettersArray.join('');
+// }
+
+// function isPalindrome(str) {
+//    return reverse(str) === str;
+// }
+// console.log(isPalindrome("kayak"));
+// console.log(isPalindrome("LaunchCode"));
+
+
+// function makeSandwich( /*parameters*/ ) {
+//    // make the sandwich
+// }
+
+// function pourDrink( /*parameters*/ ) {
+//    // pour the drink
+// }
+
+// function makeLunch( /*parameters*/ ) {
+//    makeSandwich( /*parameters*/ );
+//    pourDrink( /*parameters*/ );
+// }
+
+
 
 //Practice:
 //Function example:
@@ -185,3 +215,64 @@ isPalindrome("LaunchCode")
 // }
 
 // console.log(isEven(43))
+
+
+//a variable defined using let within a function is not visible outside of that function.
+// function removeHyphens(str) {
+//    let strWithoutHyphens = ''
+
+//    for (let i = 0; i < str.length; i++) {
+//    if (str[i] !== '-') {
+//        strWithoutHyphens += str[i];
+//    }
+//    }
+
+//    return strWithoutHyphens;
+// }
+
+// let launchCodePhone = "314-254-0107";
+// console.log(removeHyphens(launchCodePhone));
+// //console.log(strWithoutHyphens);
+
+
+//variable shadowing-a variable defined outside the function may be visible within the function.
+// let message = "Hello, World!";
+
+// function printMessage() {
+//     console.log(message);
+// }
+
+// printMessage();
+// message = "Goodbye";
+// printMessage();
+
+//This phenomenon is called shadowing, based on the metaphor that a function parameter “casts it’s shadow over” a variable of the same name, effectively hiding it.
+// let message = "Hello, World!";
+// function printMessage(message) {
+//     console.log(message);
+// }
+
+// printMessage("Goodbye");
+
+
+// let num = 42;
+
+// function isEven (num) { 
+//     return num % 2 === 0; 
+// }
+
+// console.log(isEven(43));
+
+// function calculateAreaOfCircle(radius) {
+//    let area = Math.PI * radius**2;
+//    return area;
+// }
+// console.log(calculateAreaOfCircle(10));
+
+let str = "Hello world, welcome to the universe.";
+console.log(str.indexOf("welcome"));
+console.log(str.indexOf("e",5));
+console.log(str.replace("universe","home"))
+console.log(str.slice(0,5))
+console.log(str.charCodeAt(5))
+

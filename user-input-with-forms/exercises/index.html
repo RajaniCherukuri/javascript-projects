@@ -9,6 +9,33 @@
   </head>
   <body>
     <!-- TODO: add form here -->
+    <form action="https://handlers.education.launchcode.org/request-parrot" method="POST">
+      <label>TestName <input type="text" name="testName"></label>
+      <label>TestDate <input type="date" name="testDate"></label>
+      <label>RocketType <input type="select" name="rocketType">
+        <select name="rocketType">
+          <option value="Brant">Brant</option>
+          <option value="Lynx">Lynx</option>
+          <option value="Orion">Orion</option>
+          </select></label>
+      <label>Number Of Rocket Boosters <input type="number" name="boosterCount"></label>
+      <div>Wind Rating</div>
+       <label>No Wind<input type="radio" name="windRating",id = "" value="No Wind"/></label>
+       <label>Mild<input type="radio" name="windRating" value="Mild"/></label>
+       <label>Strong<input type="radio" name="windRating" value="Strong"/></label>
+       <label>Use production grade servers<input type="checkbox" name="windRating" value="Use production grade servers"/></label>
+       <button>Run Simulation</button>
+       <script>
+        let button = document.getElementById("Run Simulation");       
+        button.addEventListener("click", function() {
+            let input = document.getElementById("windRating");
+            console.log(input.value);            
+            input.value = input.value ;
+            console.log(input.value);
+        });
+        </script>
+    </form>
+  
     
 
     <p>WARNING: This ONLY works in <b>replit</b> if this "result" page is opened in its own window. Click the icon that shows a box with an arrow coming out of it.

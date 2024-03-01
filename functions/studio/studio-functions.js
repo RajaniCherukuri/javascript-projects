@@ -28,24 +28,57 @@
 // 5. Return the final, reversed array.
 // 6. Be sure to print the results from each test case in order to verify your code.
 
-function reverseCharacters(str){
-    let arr =[];
-    let str1 ="";
+// function reverseCharacters(str){
+//     let arr =[];
+//     let str1 ="";
 
-    if(typeof(str)=="number"){
-       str1 = Number(String(str).split("").reverse().join(""))
-    }
-    if (typeof(str) =="string"){
-       str1 = str.split("").reverse().join("")
-    }
-    if (Array.isArray(str)){
-        for(i = 0;i < str.length;i++){
-            arr[i] = reverseCharacters(str[i])     
-        }
-        str1 = arr.reverse()
-    }
-    return str1
+//     if(typeof(str)=="number"){
+//        str1 = Number(String(str).split("").reverse().join(""))
+//     }
+//     if (typeof(str) =="string"){
+//        str1 = str.split("").reverse().join("")
+//     }
+//     if (Array.isArray(str)){
+//         for(i = 0;i < str.length;i++){
+//             arr[i] = reverseCharacters(str[i])     
+//         }
+//         str1 = arr.reverse()
+//     }
+//     return str1
+// }
+
+//another way
+
+function reverse(str){
+    return str.split("").reverse().join("");
 }
+
+function reverseCharacters(str){
+    let str1 ="";
+    if (typeof(str) =="string"){
+    str1 = reverse(str);
+    }
+return str1
+}
+console.log(reverseCharacters("LaunchCode"));
+
+function reverseNumbers(num){
+    let num1 = 0;
+    if (typeof(num) =="number"){
+    num1 = Number(reverse(num));
+    }
+return num1
+}
+console.log(reverseNumbers(12345));
+
+// function reverseCharacters(str){
+//     let str1 ="";
+//     if (typeof(str) =="string"){
+//     str1 = reverse(str);
+//     }
+// return str1
+// }
+// console.log(reverseCha("LaunchCode"));
 
 // 2. Loop through the old array.
 // 3. For each element in the old array, call reverseCharacters to flip the characters or digits.
@@ -61,14 +94,14 @@ function reverseCharacters(str){
 //let myVariableName =1234
 //let myVariableName ='LC101'
 //let myVariableName =8675309
-let myVariableName ='radar'
-console.log(reverseCharacters(myVariableName));
-arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
-console.log(reverseCharacters(arrayTest1));
-arrayTest2 = [123, 8897, 42, 1168, 8675309];
-console.log(reverseCharacters(arrayTest2));
-arrayTest3 = ['hello', 'world', 123, 'orange'];
-console.log(reverseCharacters(arrayTest3));
+// let myVariableName ='radar'
+// console.log(reverseCharacters(myVariableName));
+// arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
+// console.log(reverseCharacters(arrayTest1));
+// arrayTest2 = [123, 8897, 42, 1168, 8675309];
+// console.log(reverseCharacters(arrayTest2));
+// arrayTest3 = ['hello', 'world', 123, 'orange'];
+// console.log(reverseCharacters(arrayTest3));
 
 // Bonus Missions
 
@@ -77,6 +110,7 @@ console.log(reverseCharacters(arrayTest3));
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
 // 4. Use a template literal to return the phrase We put the '___' in '___'. Fill the first blank with the modified string, and fill the second blank with the original string.
 
+// function funPhrase()
 // Test Function
 
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').
